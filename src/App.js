@@ -7,6 +7,7 @@ import { Layout } from "antd";
 import Button from "share/Checkbox/Button.tsx";
 import Radio from "share/Checkbox/RadioGroup.tsx";
 import TableCustomer from "share/Checkbox/TableSelectioncustomer.tsx";
+import DraggerUpload from "share/Uploader/DraggerUpload.tsx";
 
 const { Header, Sider, Content } = Layout;
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <Sider></Sider>
         <Layout>
           <Content>
+            <div style={{ position: "absolute" }}>
+              <DraggerUpload />
+            </div>
             <Button />
             <Radio></Radio>
             <TableCustomer></TableCustomer>
