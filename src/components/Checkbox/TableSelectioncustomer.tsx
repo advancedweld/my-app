@@ -17,7 +17,7 @@ const columns = [
 ];
 
 const data = [];
-for (let i = 0; i < 46; i++) {
+for (let i = 0; i < 2; i++) {
   data.push({
     key: i,
     name: `Edward King ${i}`,
@@ -27,6 +27,34 @@ for (let i = 0; i < 46; i++) {
 }
 
 const TableCustomer = () => {
+  const components = {
+    body: {
+      row: (props) => {
+        console.log("表格row props------", props);
+        return (
+          <>
+            <div>这是一行</div>
+            {props.children}
+          </>
+        );
+      },
+      cell: (props) => {
+        console.log("表格cell props------", props);
+        return (
+          <span
+            style={{
+              display: "inline-block",
+              width: "300px",
+              background: "blue",
+              border: "1px solid red",
+            }}
+          >
+            cell
+          </span>
+        );
+      },
+    },
+  };
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   // state = {
   //   selectedRowKeys: [], // Check here to configure the default column
@@ -79,7 +107,12 @@ const TableCustomer = () => {
       {!!selectedRowKeys.length && (
         <div>{`已选择${selectedRowKeys.length}项`}</div>
       )}
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table
+        rowSelection={rowSelection}
+        columns={columns}
+        dataSource={data}
+        components={components}
+      />
     </>
   );
 };

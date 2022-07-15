@@ -9,6 +9,8 @@ import Radio from "share/Checkbox/RadioGroup.tsx";
 import TableCustomer from "share/Checkbox/TableSelectioncustomer.tsx";
 import DraggerUpload from "share/Uploader/DraggerUpload.tsx";
 
+import EffectCom from "share/EffectCom/EffectCom.tsx";
+
 const { Header, Sider, Content } = Layout;
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
             </div>
             <Button />
             <Radio></Radio>
-            <TableCustomer></TableCustomer>
+            <EffectCom></EffectCom>
+
+            {/* <TableCustomer></TableCustomer> */}
           </Content>
         </Layout>
       </Layout>
