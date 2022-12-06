@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 type Iprops = {
   initCount: number;
@@ -7,7 +7,7 @@ type Iprops = {
 const useCountDown = ({ initCount, delay }: Iprops) => {
   const [count, setCount] = useState<any>(initCount);
 
-  const timerRef = useRef<number | undefined>();
+  const timerRef = useRef<number | undefined | NodeJS.Timeout>();
 
   const handler = () => {
     timerRef.current = setTimeout(() => {

@@ -3,7 +3,7 @@ import './App.css';
 import Com from './MyComponent.tsx';
 
 import RefCom from '../src/components/Refcom';
-
+import ModalButton from '../src/components/Modal/index.tsx';
 function App() {
   return (
     <div className="App">
@@ -11,6 +11,10 @@ function App() {
         {/* <Com /> */}
         <RefCom></RefCom>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
+        <div>
+          <ModalButton />
+        </div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
