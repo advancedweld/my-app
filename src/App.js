@@ -1,17 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
-import "antd/dist/antd.css";
+import logo from './logo.svg'
+import './App.css'
+import 'antd/dist/antd.min.css'
 
-import { Layout } from "antd";
+import { Layout } from 'antd'
 
-import Button from "share/Checkbox/Button.tsx";
-import Radio from "share/Checkbox/RadioGroup.tsx";
-import TableCustomer from "share/Checkbox/TableSelectioncustomer.tsx";
-import DraggerUpload from "share/Uploader/DraggerUpload.tsx";
+import Button from 'share/Checkbox/Button.tsx'
+import Radio from 'share/Checkbox/RadioGroup.tsx'
+import TableCustomer from 'share/Checkbox/TableSelectioncustomer.tsx'
+import DraggerUpload from 'share/Uploader/DraggerUpload.tsx'
 
-import EffectCom from "share/EffectCom/EffectCom.tsx";
+import EffectCom from 'share/EffectCom/EffectCom.tsx'
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout
 function App() {
   return (
     <Layout>
@@ -20,7 +20,7 @@ function App() {
         <Sider></Sider>
         <Layout>
           <Content>
-            <div style={{ position: "absolute" }}>
+            <div style={{ position: 'absolute' }}>
               <DraggerUpload />
             </div>
             <Button />
@@ -51,7 +51,7 @@ function App() {
     //   </header>
     //   <Sider></Sider>
     // </div>
-  );
+  )
 }
 
-export default App;
+export default App
